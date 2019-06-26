@@ -1,10 +1,43 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics, mixins
 from rest_framework.response import Response
+from rest_framework import status
 from .serializers import *
 from .models import *
+import json
 
 
-# Create your views here.
+class GetAllSettingsViewSet(generics.RetrieveAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer()
+
+    def retrieve(self, request, *args, **kwargs):
+        categories = Category.objects.all()
+        series = Series.objects.all()
+        author = Author.objects.all()
+        location = Location.objects.all()
+        position = DetailPosition.objects.all()
+        return Response({
+            "categories": CategorySerializer(categories, many=True).data,
+            "series": SeriesSerializer(series, many=True).data,
+            "authors": AuthorSerializer(author, many=True).data,
+            "locations": LocationSerializer(location, many=True).data,
+            "positions": DetailPositionSerializer(position, many=True).data
+        })
+
+
+class GetByQR(generics.RetrieveAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemAbstractSerializer()
+
+    def retrieve(self, request, *args, **kwargs):
+        request = json.loads(request.body)
+        data = Item.objects.filter(qr_code=request['qr_code']).first()
+        if data:
+            return Response(ItemAbstractSerializer(data).data)
+        else:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer

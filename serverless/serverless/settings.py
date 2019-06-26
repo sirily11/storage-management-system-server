@@ -102,8 +102,13 @@ DATABASES = {
     'default': {
         'NAME': 'Serverless',
         'ENGINE': 'mysql.connector.django',
+        # "HOST": "amazon-serverless.cluster-cxhcuprzrp6b.ap-northeast-1.rds.amazonaws.com",
         'USER': 'root',
         'PASSWORD': '11017991',
+        # "USER": "sirily11",
+        # "PASSWORD": "26564872Waipo",
+        "CHARSET": "utf8",
+        "COLLATION": "utf8_general_ci"
     }
 }
 
@@ -140,9 +145,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-AWS_ACCESS_KEY_ID = "AKIAJN5MJR44Y3PISV2Q"
-
-AWS_SECRET_ACCESS_KEY = "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"
+# AWS_ACCESS_KEY_ID = "AKIAJN5MJR44Y3PISV2Q"
+#
+# AWS_SECRET_ACCESS_KEY = "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"
 
 AWS_STORAGE_BUCKET_NAME = "storage-management-data"
 
