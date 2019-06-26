@@ -30,8 +30,7 @@ class GetByQR(generics.RetrieveAPIView):
     serializer_class = ItemAbstractSerializer()
 
     def retrieve(self, request, *args, **kwargs):
-        request = json.loads(request.body)
-        data = Item.objects.filter(qr_code=request['qr_code']).first()
+        data = Item.objects.filter(qr_code=request.query_params['qr']).first()
         if data:
             return Response(ItemAbstractSerializer(data).data)
         else:

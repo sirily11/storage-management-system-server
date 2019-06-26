@@ -102,11 +102,11 @@ DATABASES = {
     'default': {
         'NAME': 'Serverless',
         'ENGINE': 'mysql.connector.django',
-        # "HOST": "amazon-serverless.cluster-cxhcuprzrp6b.ap-northeast-1.rds.amazonaws.com",
-        'USER': 'root',
-        'PASSWORD': '11017991',
-        # "USER": "sirily11",
-        # "PASSWORD": "26564872Waipo",
+        "HOST": "amazon-serverless.cluster-cxhcuprzrp6b.ap-northeast-1.rds.amazonaws.com",
+        # 'USER': 'root',
+        # 'PASSWORD': '11017991',
+        "USER": "sirily11",
+        "PASSWORD": "26564872Waipo",
         "CHARSET": "utf8",
         "COLLATION": "utf8_general_ci"
     }
