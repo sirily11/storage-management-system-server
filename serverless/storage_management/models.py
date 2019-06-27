@@ -55,7 +55,7 @@ class Item(models.Model):
     series = models.ForeignKey(Series, on_delete=models.SET_NULL, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     price = models.FloatField(default=0.0)
-    qr_code = models.CharField(max_length=128, blank=True, null=True)
+    qr_code = models.CharField(max_length=10008, blank=True, null=True)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
     detail_position = models.ForeignKey(DetailPosition, on_delete=models.SET_NULL, blank=True, null=True)
     column = models.IntegerField(default=1)
