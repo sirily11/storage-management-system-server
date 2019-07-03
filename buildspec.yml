@@ -5,9 +5,12 @@ phases:
   install:
     commands:
       - echo Installing phase...
+    runtime-versions:
+        python: 3.7
   pre_build:
     commands:
       - echo pythons dependencies...
+      - pip install pipenv
       - pipenv install
       - cd serverless
       - pipenv shell
