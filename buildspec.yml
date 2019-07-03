@@ -13,14 +13,13 @@ phases:
       - pip install pipenv
       - pipenv install
       - cd serverless
-      - pipenv shell
   build:
     commands:
       - echo Build started on `date`
       - echo Update database
-      - python manage.py makemigrations
-      - python manage.py migrate
-      - zappa update
+      - pipenv run python manage.py makemigrations
+      - pipenv run python manage.py migrate
+      - pipenv run zappa update
   post_build:
     commands:
       - echo Build completed on `date`
