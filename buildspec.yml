@@ -20,7 +20,7 @@ phases:
       - echo Update database
       - pipenv run python manage.py makemigrations
       - pipenv run python manage.py migrate
-      - pipenv run zappa update
+      - pipenv run zappa update dev
   post_build:
     commands:
       - echo Build completed on `date`
