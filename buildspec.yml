@@ -12,6 +12,7 @@ phases:
       - echo pythons dependencies...
       - pip install pipenv
       - pipenv install
+      - pipenv install zappa
       - cd serverless
   build:
     commands:
