@@ -1,0 +1,22 @@
+version: "3"
+services:
+  server:
+    build: ./
+    image: server
+    ports:
+      - 80:80
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./serverless:/usr/local/zappa_server/
+    command: "pipenv run python manage.py runserver 0.0.0.0:80"
+
+  mysql:
+    image: mysql
+    container_name: jsp-sql-server
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "somepassword"
+    volumes:
+      - ./sql/db-storage:/var/lib/mysql
