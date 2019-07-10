@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'serverless.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'Serverless',
+        'NAME': '../serverless.db',
         "ENGINE": "django.db.backends.sqlite3",
         # 'ENGINE': 'mysql.connector.django',
         # "HOST": "mysql",
@@ -166,6 +166,8 @@ AWS_S3_CUSTOM_DOMAIN = 'storage.sirileepage.com'
 
 AWS_LOCATION = "static"
 
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
 # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 # STATIC_URL = '/static/'
 
