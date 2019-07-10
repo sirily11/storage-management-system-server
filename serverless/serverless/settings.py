@@ -104,7 +104,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         "HOST": "mysql",
         'USER': 'root',
-        'PASSWORD': '11017991',
+        'PASSWORD': 'somepassword',
         "CHARSET": "utf8",
         "COLLATION": "utf8_general_ci"
     }
