@@ -102,11 +102,9 @@ DATABASES = {
     'default': {
         'NAME': 'Serverless',
         'ENGINE': 'mysql.connector.django',
-        "HOST": "amazon-serverless.cluster-cxhcuprzrp6b.ap-northeast-1.rds.amazonaws.com",
-        # 'USER': 'root',
-        # 'PASSWORD': '11017991',
-        "USER": "sirily11",
-        "PASSWORD": "26564872Waipo",
+        "HOST": "mysql",
+        'USER': 'root',
+        'PASSWORD': '11017991',
         "CHARSET": "utf8",
         "COLLATION": "utf8_general_ci"
     }
@@ -167,10 +165,10 @@ AWS_S3_CUSTOM_DOMAIN = 'storage.sirileepage.com'
 
 AWS_LOCATION = "static"
 
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 # STATIC_URL = '/static/'
 
-MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
+# MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

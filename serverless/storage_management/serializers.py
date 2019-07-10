@@ -8,6 +8,11 @@ class ImageRelatedField(serializers.RelatedField, ABC):
         return value.image.url
 
 
+class FileRelatedField(serializers.RelatedField, ABC):
+    def to_representation(self, value: ItemFile):
+        return value.file
+
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
@@ -46,9 +51,18 @@ class ItemImageSerializer(serializers.ModelSerializer):
         fields = ("id", "image", "item", "item_name")
 
 
+class ItemFileSerializer(serializers.ModelSerializer):
+    item_name = serializers.ReadOnlyField(source="item.name")
+
+    class Meta:
+        model = ItemImage
+        fields = ("id", "file", "item")
+
+
 class ItemSerializer(serializers.ModelSerializer):
     # images = serializers.SlugRelatedField(slug_field="title", queryset=ItemImage.objects.all(), many=True)
     images = ImageRelatedField(many=True, read_only=True)
+    files = FileRelatedField(many=True, read_only=True)
     author_name = AuthorSerializer(source="author", read_only=True)
     series_name = SeriesSerializer(source="series", read_only=True)
     category_name = CategorySerializer(source="category", read_only=True)
@@ -73,7 +87,8 @@ class ItemSerializer(serializers.ModelSerializer):
         fields = (
             "id", "name", "description", "created_time", "author_name", "series_name",
             "category_name", "price", "qr_code", "location_name", "position_name",
-            "images", "column", "row", "author_id", "series_id", "category_id", "location_id", "position_id")
+            "images", "files", "column", "row", "author_id", "series_id", "category_id", "location_id", "position_id",
+            "uuid")
 
 
 class ItemAbstractSerializer(serializers.ModelSerializer):
@@ -84,7 +99,7 @@ class ItemAbstractSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Item
-        fields = ("id", "name", "description", "author",
+        fields = ("id", "uuid", "name", "description", "author",
                   "author_name", "category_name",
                   "series_name", "column", "row",
                   "position")

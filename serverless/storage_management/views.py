@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import *
 from .models import *
+from django.db.models import Q
 import json
 
 
@@ -30,11 +31,18 @@ class GetByQR(generics.RetrieveAPIView):
     serializer_class = ItemAbstractSerializer()
 
     def retrieve(self, request, *args, **kwargs):
-        data = Item.objects.filter(qr_code=request.query_params['qr']).first()
-        if data:
-            return Response(ItemAbstractSerializer(data).data)
-        else:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+        data = None
+        try:
+            data = Item.objects.filter(
+                Q(uuid=request.query_params['qr'])).first()
+        except Exception:
+            # print(e)
+            data = Item.objects.filter(Q(qr_code=request.query_params['qr'])).first()
+        finally:
+            if data:
+                return Response(ItemAbstractSerializer(data).data)
+            else:
+                return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class CategoryViewSet(viewsets.ModelViewSet):

@@ -1,7 +1,7 @@
 from django.contrib import admin
-from storage_management.models import *
+from .models import *
 
 
-@admin.register(Author, ItemImage, Item, Location, DetailPosition, Category, Series)
+@admin.register(Author, ItemImage, Item, Location, DetailPosition, Category, Series, ItemFile)
 class GlacierAdmin(admin.ModelAdmin):
     pass

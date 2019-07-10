@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
-
+import uuid
 
 # Create your models here.
 class Category(models.Model):
@@ -48,6 +48,7 @@ class DetailPosition(models.Model):
 
 
 class Item(models.Model):
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, null=True, blank=True)
     name = models.CharField(max_length=1024, default="", verbose_name=_("Book Name"))
     description = models.TextField(max_length=1024, blank=True, null=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, blank=True, null=True)
@@ -72,3 +73,11 @@ class ItemImage(models.Model):
 
     def __str__(self):
         return f"Image-{self.item.name.title()}"
+
+
+class ItemFile(models.Model):
+    file = models.CharField(default="", max_length=1024)
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="files")
+
+    def __str__(self):
+        return f"File-{self.item.name.title()}"
