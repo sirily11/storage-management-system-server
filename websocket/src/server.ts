@@ -89,6 +89,6 @@ wss.on("connection", async (ws: WebSocket, req: any) => {
 });
 
 //start our server
-server.listen(8000, () => {
+server.listen(400, () => {
   console.log(`server start`);
 });
