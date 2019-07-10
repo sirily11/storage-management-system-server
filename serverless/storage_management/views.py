@@ -83,3 +83,28 @@ class ItemViewSet(viewsets.ModelViewSet):
 class ItemImageViewSet(viewsets.ModelViewSet):
     queryset = ItemImage.objects.all()
     serializer_class = ItemImageSerializer
+
+
+class ItemFileViewSet(viewsets.ModelViewSet):
+    queryset = ItemFile.objects.all()
+    serializer_class = ItemFileSerializer
+
+    def create(self, request, *args, **kwargs):
+        files: [ItemFile] = request.data
+
+        valid = True
+        s = []
+        for file in files:
+            serialized = ItemFileSerializer(data=file)
+            if not serialized.is_valid():
+                valid = False
+                break
+            s.append(serialized)
+
+        if valid:
+            [se.save() for se in s]
+            return Response(data=[se.data for se in s], status=status.HTTP_201_CREATED)
+        else:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+
+

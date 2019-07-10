@@ -10,6 +10,7 @@ router.register(r'location', views.LocationViewSet, base_name="location"),
 router.register(r'detail-position', views.DetailPositionViewSet, base_name="detail position"),
 router.register(r'item-image', views.ItemImageViewSet, base_name="Item image")
 router.register(r'item', views.ItemViewSet, base_name="Item")
+router.register(r'files', views.ItemFileViewSet, base_name="files")
 
 urlpatterns = [
     path('', include(router.urls)),

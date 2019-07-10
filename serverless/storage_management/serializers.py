@@ -52,10 +52,12 @@ class ItemImageSerializer(serializers.ModelSerializer):
 
 
 class ItemFileSerializer(serializers.ModelSerializer):
-    item_name = serializers.ReadOnlyField(source="item.name")
+    # def __init__(self, *args, **kwargs):
+    #     many = kwargs.pop('many', True)
+    #     super(ItemFileSerializer, self).__init__(many=many, *args, **kwargs)
 
     class Meta:
-        model = ItemImage
+        model = ItemFile
         fields = ("id", "file", "item")
 
 
