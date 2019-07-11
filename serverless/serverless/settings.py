@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "glacier",
     "storage_management",
-    "storages",
+    # "storages",
     "django_cleanup.apps.CleanupConfig"
 ]
 
@@ -148,11 +148,11 @@ USE_TZ = True
 #
 # AWS_SECRET_ACCESS_KEY = "UJIZUtfrLiDawEhH5Ad7Pj58BGhDsvPQIN5CmZJ5"
 
-AWS_STORAGE_BUCKET_NAME = "storage-management-data"
-
-AWS_DEFAULT_ACL = None
-
-AWS_S3_REGION_NAME = "ap-northeast-1"
+# AWS_STORAGE_BUCKET_NAME = "storage-management-data"
+#
+# AWS_DEFAULT_ACL = None
+#
+# AWS_S3_REGION_NAME = "ap-northeast-1"
 
 MEDIAFILES_LOCATION = 'media'
 
@@ -164,7 +164,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
 AWS_S3_CUSTOM_DOMAIN = 'storage.sirileepage.com'
 
-AWS_LOCATION = "static"
+# AWS_LOCATION = "static"
 
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
