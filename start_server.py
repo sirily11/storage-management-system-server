@@ -15,6 +15,7 @@ class Application(tk.Frame):
         self.master = master
         self.pack()
         self.create_widgets()
+        self.lock = threading.Lock()
 
     def create_widgets(self):
         self.pull_button = tk.Button(self)
@@ -46,14 +47,18 @@ class Application(tk.Frame):
         self.display.config(text="Starting websocket server")
         with subprocess.Popen("yarn prod", shell=True, stdout=subprocess.PIPE, cwd="./websocket") as p:
             for line in p.stdout:
+                self.lock.acquire()
                 self.output.insert(tk.END, line)
+                self.lock.release()
 
     def start2(self):
         self.display.config(text="Starting django server")
         with subprocess.Popen("python3 manage.py runserver 0.0.0.0:8080", shell=True, stdout=subprocess.PIPE,
                               cwd="./serverless") as p:
             for line in p.stdout:
+                self.lock.acquire()
                 self.output.insert(tk.END, line)
+                self.lock.release()
 
     def pull(self):
         self.display.config(text="Starting git pull")
