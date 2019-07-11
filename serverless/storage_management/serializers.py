@@ -62,26 +62,42 @@ class ItemFileSerializer(serializers.ModelSerializer):
 
 
 class ItemSerializer(serializers.ModelSerializer):
-    images = ImageRelatedField(many=True, read_only=True)
-    files = FileRelatedField(many=True, read_only=True)
-    files_objects = ItemFileSerializer(source="files", many=True, read_only=True)
-    images_objects = ItemImageSerializer(source="images", many=True, read_only=True)
-    author_name = AuthorSerializer(source="author", read_only=True)
-    series_name = SeriesSerializer(source="series", read_only=True)
-    category_name = CategorySerializer(source="category", read_only=True)
-    location_name = LocationSerializer(source="location", read_only=True)
-    position_name = DetailPositionSerializer(source="detail_position", read_only=True)
-    author_id = serializers.PrimaryKeyRelatedField(source="author", queryset=Author.objects.all(), write_only=True,
+    images = ImageRelatedField(many=True,
+                               read_only=True)
+    files = FileRelatedField(many=True,
+                             read_only=True)
+    files_objects = ItemFileSerializer(source="files",
+                                       many=True,
+                                       read_only=True)
+    images_objects = ItemImageSerializer(source="images",
+                                         many=True,
+                                         read_only=True)
+    author_name = AuthorSerializer(source="author",
+                                   read_only=True)
+    series_name = SeriesSerializer(source="series",
+                                   read_only=True)
+    category_name = CategorySerializer(source="category",
+                                       read_only=True)
+    location_name = LocationSerializer(source="location",
+                                       read_only=True)
+    position_name = DetailPositionSerializer(source="detail_position",
+                                             read_only=True)
+    author_id = serializers.PrimaryKeyRelatedField(source="author",
+                                                   queryset=Author.objects.all(), write_only=True,
                                                    required=False)
-    series_id = serializers.PrimaryKeyRelatedField(source="series", queryset=Series.objects.all(), write_only=True,
+    series_id = serializers.PrimaryKeyRelatedField(source="series",
+                                                   queryset=Series.objects.all(), write_only=True,
                                                    required=False)
-    category_id = serializers.PrimaryKeyRelatedField(source="category", queryset=Category.objects.all(),
+    category_id = serializers.PrimaryKeyRelatedField(source="category",
+                                                     queryset=Category.objects.all(),
                                                      write_only=True,
                                                      required=False)
-    location_id = serializers.PrimaryKeyRelatedField(source="location", queryset=Location.objects.all(),
+    location_id = serializers.PrimaryKeyRelatedField(source="location",
+                                                     queryset=Location.objects.all(),
                                                      write_only=True,
                                                      required=False)
-    position_id = serializers.PrimaryKeyRelatedField(source="detail_position", queryset=DetailPosition.objects.all(),
+    position_id = serializers.PrimaryKeyRelatedField(source="detail_position",
+                                                     queryset=DetailPosition.objects.all(),
                                                      write_only=True,
                                                      required=False)
 
