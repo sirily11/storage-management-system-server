@@ -62,10 +62,10 @@ class ItemFileSerializer(serializers.ModelSerializer):
 
 
 class ItemSerializer(serializers.ModelSerializer):
-    # images = serializers.SlugRelatedField(slug_field="title", queryset=ItemImage.objects.all(), many=True)
     images = ImageRelatedField(many=True, read_only=True)
     files = FileRelatedField(many=True, read_only=True)
-    files_objects = ItemFileSerializer(source="files",many=True, read_only=True)
+    files_objects = ItemFileSerializer(source="files", many=True, read_only=True)
+    images_objects = ItemImageSerializer(source="images", many=True, read_only=True)
     author_name = AuthorSerializer(source="author", read_only=True)
     series_name = SeriesSerializer(source="series", read_only=True)
     category_name = CategorySerializer(source="category", read_only=True)
@@ -91,7 +91,7 @@ class ItemSerializer(serializers.ModelSerializer):
             "id", "name", "description", "created_time", "author_name", "series_name",
             "category_name", "price", "qr_code", "location_name", "position_name",
             "images", "files", "column", "row", "author_id", "series_id", "category_id", "location_id", "position_id",
-            "uuid", "files_objects")
+            "uuid", "files_objects", "images_objects")
 
 
 class ItemAbstractSerializer(serializers.ModelSerializer):

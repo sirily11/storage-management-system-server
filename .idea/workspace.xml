@@ -83,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serverless/storage_management/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+            <state relative-caret-position="224">
+              <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -291,12 +291,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561280166935</updated>
       <workItem from="1561280174126" duration="13861000" />
-      <workItem from="1562764793970" duration="7171000" />
+      <workItem from="1562764793970" duration="7542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28809000" />
+    <option name="totallyTimeSpent" value="29180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -484,8 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serverless/storage_management/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+        <state relative-caret-position="224">
+          <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
