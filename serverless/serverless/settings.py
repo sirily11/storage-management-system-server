@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "glacier",
     "storage_management",
-    "storages",
+    # "storages",
     "django_cleanup.apps.CleanupConfig"
 ]
 
@@ -144,9 +144,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-AWS_ACCESS_KEY_ID = "AKIAJN5MJR44Y3PISV2Q"
+# AWS_ACCESS_KEY_ID = "AKIAJN5MJR44Y3PISV2Q"
 #
-AWS_SECRET_ACCESS_KEY = "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"
+# AWS_SECRET_ACCESS_KEY = "UJIZUtfrLiDawEhH5Ad7Pj58BGhDsvPQIN5CmZJ5"
 
 AWS_STORAGE_BUCKET_NAME = "storage-management-data"
 #
@@ -171,7 +171,7 @@ MEDIA_URL = "/media/"
 # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 # STATIC_URL = '/static/'
 
-MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
+# MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
