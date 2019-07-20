@@ -45,10 +45,11 @@ class DetailPositionSerializer(serializers.ModelSerializer):
 
 class ItemImageSerializer(serializers.ModelSerializer):
     item_name = serializers.ReadOnlyField(source="item.name")
+    category = CategorySerializer(source="item.category", read_only=True)
 
     class Meta:
         model = ItemImage
-        fields = ("id", "image", "item", "item_name")
+        fields = ("id", "image", "item", "item_name", "category")
 
 
 class ItemFileSerializer(serializers.ModelSerializer):
