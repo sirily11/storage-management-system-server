@@ -108,7 +108,7 @@ class ItemSerializer(serializers.ModelSerializer):
             "id", "name", "description", "created_time", "author_name", "series_name",
             "category_name", "price", "qr_code", "location_name", "position_name",
             "images", "files", "column", "row", "author_id", "series_id", "category_id", "location_id", "position_id",
-            "uuid", "files_objects", "images_objects")
+            "uuid", "files_objects", "images_objects", "unit")
 
 
 class ItemAbstractSerializer(serializers.ModelSerializer):
@@ -121,5 +121,5 @@ class ItemAbstractSerializer(serializers.ModelSerializer):
         model = Item
         fields = ("id", "uuid", "name", "description", "author",
                   "author_name", "category_name",
-                  "series_name", "column", "row",
+                  "series_name", "column", "row","unit",
                   "position")
