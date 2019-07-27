@@ -61,6 +61,7 @@ class Item(models.Model):
     detail_position = models.ForeignKey(DetailPosition, on_delete=models.SET_NULL, blank=True, null=True)
     column = models.IntegerField(default=1)
     row = models.IntegerField(default=1)
+    unit = models.CharField(max_length=10, default="USD")
 
     def __str__(self):
         return self.name
