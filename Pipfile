@@ -18,6 +18,7 @@ django-cors-headers = "*"
 django-s3-storage = "*"
 django-storages = "*"
 django-cleanup = "*"
+drf-schema-adapter = "*"
 
 [requires]
 python_version = "3.7"

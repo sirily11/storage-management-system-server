@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 import uuid
 
+
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=128, default="Book", unique=True)
@@ -48,9 +49,13 @@ class DetailPosition(models.Model):
 
 
 class Item(models.Model):
+    unit_choices = [("USD", "美元"), ("HDK", "港币"), ("CNY", "人民币")]
+
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, null=True, blank=True)
-    name = models.CharField(max_length=1024, default="", verbose_name=_("Book Name"))
-    description = models.TextField(max_length=1024, blank=True, null=True)
+    name = models.CharField(max_length=1024, default="", verbose_name=_("Item Name"),
+                            help_text="Please Enter your item name")
+    description = models.TextField(max_length=1024, blank=True, null=True,
+                                   help_text="Please enter your item description")
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, blank=True, null=True)
     created_time = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     series = models.ForeignKey(Series, on_delete=models.SET_NULL, null=True, blank=True)
@@ -61,7 +66,7 @@ class Item(models.Model):
     detail_position = models.ForeignKey(DetailPosition, on_delete=models.SET_NULL, blank=True, null=True)
     column = models.IntegerField(default=1)
     row = models.IntegerField(default=1)
-    unit = models.CharField(max_length=10, default="USD")
+    unit = models.CharField(max_length=10, default="USD", choices=unit_choices)
 
     def __str__(self):
         return self.name
