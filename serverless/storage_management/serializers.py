@@ -32,15 +32,25 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 
 class LocationSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+
+    def get_name(self, obj: Location):
+        return f"{str(obj)}"
+
     class Meta:
         model = Location
-        fields = ("id", "country", "city", "street", "building", "unit", "room_number")
+        fields = ("id", "country", "city", "street", "building", "unit", "room_number", "name")
 
 
 class DetailPositionSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+
+    def get_name(self, obj: DetailPosition):
+        return f"{str(obj)}"
+
     class Meta:
         model = DetailPosition
-        fields = ("id", "position", "description")
+        fields = ("id", "position", "description", "name")
 
 
 class ItemImageSerializer(serializers.ModelSerializer):
@@ -105,10 +115,11 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = (
-            "id", "name", "description", "created_time", "author_name", "series_name",
-            "category_name", "price", "qr_code", "location_name", "position_name",
-            "images", "files", "column", "row", "author_id", "series_id", "category_id", "location_id", "position_id",
-            "uuid", "files_objects", "images_objects", "unit")
+            "id", "name", "description", "price", "column", "row", "qr_code", "unit", "created_time", "author_name",
+            "series_name",
+            "category_name", "location_name", "position_name",
+            "images", "files", "author_id", "series_id", "category_id", "location_id", "position_id",
+            "uuid", "files_objects", "images_objects")
 
 
 class ItemAbstractSerializer(serializers.ModelSerializer):
@@ -121,5 +132,5 @@ class ItemAbstractSerializer(serializers.ModelSerializer):
         model = Item
         fields = ("id", "uuid", "name", "description", "author",
                   "author_name", "category_name",
-                  "series_name", "column", "row","unit",
+                  "series_name", "column", "row", "unit",
                   "position")
