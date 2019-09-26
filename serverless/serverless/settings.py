@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -67,6 +66,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
+DRF_AUTO_METADATA_ADAPTER = 'drf_auto_endpoint.adapters.EmberAdapter'
 
 CORS_ALLOW_METHODS = (
     'DELETE',
@@ -76,7 +76,6 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
-
 
 TEMPLATES = [
     {
@@ -96,7 +95,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'serverless.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -112,7 +110,6 @@ DATABASES = {
         "COLLATION": "utf8_general_ci"
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -134,10 +131,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    # 'PAGE_SIZE': 100
-    'DEFAULT_METADATA_CLASS': 'drf_auto_endpoint.metadata.AutoMetadata',
+    'PAGE_SIZE': 100,
+    'DEFAULT_METADATA_CLASS': 'drf_auto_endpoint.metadata.MinimalAutoMetadata',
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
-DRF_AUTO_METADATA_ADAPTER = 'drf_auto_endpoint.adapters.EmberAdapter'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

@@ -95,22 +95,22 @@ class ItemSerializer(serializers.ModelSerializer):
                                              read_only=True)
     author_id = serializers.PrimaryKeyRelatedField(source="author",
                                                    queryset=Author.objects.all(), write_only=True,
-                                                   required=False)
+                                                   required=True)
     series_id = serializers.PrimaryKeyRelatedField(source="series",
                                                    queryset=Series.objects.all(), write_only=True,
-                                                   required=False)
+                                                   required=True)
     category_id = serializers.PrimaryKeyRelatedField(source="category",
                                                      queryset=Category.objects.all(),
                                                      write_only=True,
-                                                     required=False)
+                                                     required=True)
     location_id = serializers.PrimaryKeyRelatedField(source="location",
                                                      queryset=Location.objects.all(),
                                                      write_only=True,
-                                                     required=False)
+                                                     required=True)
     position_id = serializers.PrimaryKeyRelatedField(source="detail_position",
                                                      queryset=DetailPosition.objects.all(),
                                                      write_only=True,
-                                                     required=False)
+                                                     required=True)
 
     class Meta:
         model = Item
