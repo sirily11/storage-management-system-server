@@ -9,20 +9,7 @@ services:
     tty: true
     volumes:
       - ./serverless:/usr/local/serverless/serverless/
-      - ./serverless.db:/usr/local/serverless/serverless.db
     command: >
       sh -c "pipenv run python manage.py makemigrations &&
              pipenv run python manage.py migrate &&
              pipenv run python manage.py runserver 0.0.0.0:80"
-
-#  mysql:
-#    image: mysql
-#    container_name: mysql_server
-#    ports:
-#      - 3306:3306
-#    environment:
-#      MYSQL_DATABASE: 'serverless'
-#      MYSQL_PASSWORD: 'somepassword'
-#      MYSQL_ROOT_PASSWORD: "somepassword"
-#    volumes:
-#      - ./sql/db-storage:/var/lib/mysql
