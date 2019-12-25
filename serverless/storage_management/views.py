@@ -32,18 +32,19 @@ class GetByQR(generics.RetrieveAPIView):
     serializer_class = ItemAbstractSerializer()
 
     def retrieve(self, request, *args, **kwargs):
-        data = None
-        try:
-            data = Item.objects.filter(
-                Q(uuid=request.query_params['qr'])).first()
-        except Exception:
-            # print(e)
-            data = Item.objects.filter(Q(qr_code=request.query_params['qr'])).first()
-        finally:
-            if data:
-                return Response(ItemAbstractSerializer(data).data)
-            else:
-                return Response(status=status.HTTP_204_NO_CONTENT)
+        data = Item.objects.filter(
+            Q(uuid=request.query_params['qr'])).first()
+        if data:
+            return Response(ItemAbstractSerializer(data).data)
+        p = DetailPosition.objects.filter(
+            uuid=request.query_params['qr']).first()
+        if p:
+            items = Item.objects.filter(detail_position=p)
+            if items:
+                data = ItemAbstractSerializer(items, many=True)
+                return Response(data=data.data, status=200)
+
+        return Response(data=[], status=400)
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -107,3 +108,18 @@ class ItemFileViewSet(viewsets.ModelViewSet):
             return Response(data=[se.data for se in s], status=status.HTTP_201_CREATED)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class GetItemByLocationView(generics.RetrieveAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer()
+
+    def retrieve(self, request, *args, **kwargs):
+        pid = request.query_params['position_id']
+        items = Item.objects.filter(detail_position=pid)
+        print(items)
+        if items:
+            data = ItemSerializer(items, many=True)
+            return Response(data=data.data, status=200)
+
+        return Response(data=[], status=400)
