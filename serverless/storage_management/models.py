@@ -82,6 +82,7 @@ class Item(models.Model):
     column = models.IntegerField(default=1)
     row = models.IntegerField(default=1)
     unit = models.CharField(max_length=10, default="USD", choices=unit_choices)
+    quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name

@@ -116,7 +116,7 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = (
-            "id", "name", "description", "price", "column", "row", "qr_code", "unit", "created_time", "author_name",
+            "id", "name", "description", "price", "quantity", "column", "row", "qr_code", "unit", "created_time", "author_name",
             "series_name",
             "category_name", "location_name", "position_name",
             "images", "files", "author_id", "series_id", "category_id", "location_id", "position_id",
