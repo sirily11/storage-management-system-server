@@ -33,7 +33,7 @@ class GetByQR(generics.RetrieveAPIView):
 
     def retrieve(self, request, *args, **kwargs):
 
-        data = Item.objects.filter(qr_code=request.query_params['qr']).first
+        data = Item.objects.filter(qr_code=request.query_params['qr']).first()
         if data:
             return Response(ItemAbstractSerializer(data).data)
 
@@ -41,7 +41,7 @@ class GetByQR(generics.RetrieveAPIView):
             Q(uuid=request.query_params['qr'])).first()
         if data:
             return Response(ItemAbstractSerializer(data).data)
-            
+
         p = DetailPosition.objects.filter(
             uuid=request.query_params['qr']).first()
         if p:
