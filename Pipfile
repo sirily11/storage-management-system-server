@@ -9,16 +9,14 @@ verify_ssl = true
 mysql-connector-python = "*"
 pytest = "*"
 requests = "*"
-sqlalchemy = "*"
-coverage = "*"
 pillow = "*"
 django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
-django-s3-storage = "*"
 django-storages = "*"
 django-cleanup = "*"
 drf-schema-adapter = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.7"

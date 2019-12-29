@@ -3,7 +3,7 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'category', views.CategoryViewSet, basename="Category")
+router.register(r'category', views.CategoryViewSet, basename="Category",)
 router.register(r'series', views.SeriesViewSet, basename="Series"),
 router.register(r'author', views.AuthorViewSet, basename="author"),
 router.register(r'location', views.LocationViewSet, basename="location"),
