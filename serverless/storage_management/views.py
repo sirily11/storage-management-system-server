@@ -88,7 +88,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = ItemSerializer
     pagination_class = PageNumberPagination
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['category']
+    filterset_fields = ['category', 'location', 'detail_position']
 
     def list(self, request, *args, **kwargs):
         self.serializer_class = ItemAbstractSerializer

@@ -17,5 +17,4 @@ urlpatterns = [
     path('', include(router.urls)),
     path('settings', views.GetAllSettingsViewSet.as_view()),
     path('searchByQR', views.GetByQR.as_view())
-
 ]
