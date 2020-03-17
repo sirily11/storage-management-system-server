@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "storage_management",
-    # "storages",
+    'django_filters',
     "django_cleanup.apps.CleanupConfig",
     "drf_auto_endpoint"
 ]
@@ -129,7 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100,
+    'PAGE_SIZE': 1,
     'DEFAULT_METADATA_CLASS': 'drf_auto_endpoint.metadata.MinimalAutoMetadata',
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }

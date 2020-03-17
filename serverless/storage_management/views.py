@@ -5,6 +5,7 @@ from rest_framework.pagination import LimitOffsetPagination, PageNumberPaginatio
 from .serializers import *
 from .models import *
 from django.db.models import Q
+from django_filters.rest_framework import DjangoFilterBackend
 import json
 
 
@@ -85,11 +86,13 @@ class DetailPositionViewSet(viewsets.ModelViewSet):
 class ItemViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category']
 
     def list(self, request, *args, **kwargs):
-        query = Item.objects.all()
-        serializer = ItemAbstractSerializer(query, many=True)
-        return Response(serializer.data)
+        self.serializer_class = ItemAbstractSerializer
+        return super().list(request, *args, **kwargs)
 
 
 class ItemImageViewSet(viewsets.ModelViewSet):
