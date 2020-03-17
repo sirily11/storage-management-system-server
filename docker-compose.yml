@@ -4,7 +4,7 @@ services:
     build: ./
     image: storage-server
     ports:
-      - 80:80
+      - 8000:80
     stdin_open: true
     tty: true
     volumes:
