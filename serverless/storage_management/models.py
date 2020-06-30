@@ -42,6 +42,9 @@ class Location(models.Model):
         max_length=128, default="Tian Qi Yuan", null=True, blank=True)
     room_number = models.CharField(max_length=128, default="605")
 
+    latitude = models.FloatField(null=True, blank=True)
+
+    longitude = models.FloatField(null=True, blank=True)
     def __str__(self):
         return f"{self.country}{self.city}{self.building}"
 
@@ -51,6 +54,7 @@ class DetailPosition(models.Model):
     description = models.TextField(max_length=1024, null=True, blank=True)
     uuid = models.UUIDField(
         default=uuid.uuid4, editable=False, null=True, blank=True)
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.position
