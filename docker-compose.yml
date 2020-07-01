@@ -23,7 +23,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./serverless:/usr/local/serverless/serverless/
+      - ./serverless:/usr/local/serverless
     command: >
       sh -c "pipenv run python manage.py makemigrations &&
              pipenv run python manage.py migrate &&

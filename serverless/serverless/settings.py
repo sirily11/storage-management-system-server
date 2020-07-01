@@ -23,7 +23,7 @@ SECRET_KEY = 'y#n2o@b)bu#cu7khqm7x21fwh7t38i-cv+*-6w-@3x6f8cg((#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True if os.getenv('local') else False
+DEBUG = False if os.getenv('local') else True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -171,6 +171,6 @@ MEDIA_URL = "/media/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
