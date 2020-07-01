@@ -99,10 +99,11 @@ WSGI_APPLICATION = 'serverless.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': '../serverless.db',
-        "ENGINE": "django.db.backends.sqlite3",
-        "CHARSET": "utf8",
-        "COLLATION": "utf8_general_ci"
+        'NAME': 'django',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': "db",
+        'PASSWORD': 'django',
+        'USER': 'django'
     }
 }
 

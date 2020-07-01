@@ -128,3 +128,4 @@ node_modules
 *.png
 *.db
 media
+database/
