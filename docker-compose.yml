@@ -1,24 +1,26 @@
 version: "3"
 services:
-#  https-portal:
-#    image: steveltn/https-portal:1
-#    ports:
-#      - '80:80'
-#      - '443:443'
-#    links:
-#      - server
-#    restart: always
-#    environment:
-#      DOMAINS: 'example.com -> http://server'
-#      STAGE: local
-#      # STAGE: 'production' # Don't use production until staging works
-#      # FORCE_RENEW: 'true'
-  server:
-    build: ./
-    image: storage-server
+  https:
+    image: steveltn/https-portal:1
     ports:
       - '80:80'
-      - '443:80'
+      - '443:443'
+    links:
+      - django
+    restart: always
+    depends_on:
+      - django
+    environment:
+      DOMAINS: 'localhost.com -> http://django'
+      STAGE: local
+      # STAGE: 'production' # Don't use production until staging works
+      # FORCE_RENEW: 'true'
+  django:
+    build: ./
+    image: storage-server
+#    ports:
+#      - '80:80'
+#      - '443:80'
     stdin_open: true
     tty: true
     volumes:

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/websocket/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.https-portal: Compose Deployment">
+  <component name="RunManager" selected="Django Server.Production">
     <configuration name="Test" type="DjangoTestsConfigurationType">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,6 +126,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Production" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Zappa_Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="serverless.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/storage-management-system-server-xqYKZuKm/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="80" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Serverless" type="Python.DjangoServer" factoryName="Django server">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,6 +157,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="serverless.settings" />
+        <env name="local" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/Zappa_Server-eBgRb1Hc/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -182,13 +210,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django Server.Production" />
       <item itemvalue="Django Server.Serverless" />
       <item itemvalue="Django tests.Test" />
       <item itemvalue="Django tests.Test: storage_management.tests.TestGetItems.test_search_by_qr" />
       <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Python.start_server" />
       <item itemvalue="Docker.docker-compose.yml.https-portal: Compose Deployment" />
+      <item itemvalue="Python.start_server" />
     </list>
     <recent_temporary>
       <list>
@@ -219,7 +248,7 @@
       <workItem from="1577357976497" duration="78000" />
       <workItem from="1577522345181" duration="1321000" />
       <workItem from="1584471785759" duration="3107000" />
-      <workItem from="1593456326328" duration="5829000" />
+      <workItem from="1593456326328" duration="7331000" />
     </task>
     <servers />
   </component>
@@ -227,22 +256,30 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="400" key="GridCell.Tab.0.bottom" timestamp="1593531199592">
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593590387920">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593531199592" />
-    <state width="1878" height="400" key="GridCell.Tab.0.center" timestamp="1593531199592">
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590387920" />
+    <state x="825" y="277" key="EnvironmentVariablesDialog" timestamp="1593590259452">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593531199592" />
-    <state width="1878" height="400" key="GridCell.Tab.0.left" timestamp="1593531199591">
+    <state x="825" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590259452" />
+    <state width="1878" height="400" key="GridCell.Tab.0.bottom" timestamp="1593590449551">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593531199591" />
-    <state width="1878" height="400" key="GridCell.Tab.0.right" timestamp="1593531199592">
+    <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590449551" />
+    <state width="1878" height="400" key="GridCell.Tab.0.center" timestamp="1593590449549">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593531199592" />
+    <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590449549" />
+    <state width="1878" height="400" key="GridCell.Tab.0.left" timestamp="1593590449546">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590449546" />
+    <state width="1878" height="400" key="GridCell.Tab.0.right" timestamp="1593590449551">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590449551" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
