@@ -12,7 +12,6 @@ services:
       - django
     environment:
       DOMAINS: 'storage.sirileepage.com -> http://django'
-      STAGE: local
       # STAGE: 'production' # Don't use production until staging works
       # FORCE_RENEW: 'true'
   django:
