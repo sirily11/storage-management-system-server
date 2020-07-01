@@ -11,6 +11,7 @@ services:
     depends_on:
       - django
     environment:
+      CLIENT_MAX_BODY_SIZE: 0
       DOMAINS: 'storage.sirileepage.com -> http://django'
       STAGE: 'production' # Don't use production until staging works
       # FORCE_RENEW: 'true'
