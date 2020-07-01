@@ -1,10 +1,20 @@
 version: "3"
 services:
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - server
+    restart: always
+    environment:
+      DOMAINS: 'storage.sirileepage.com -> http://server:80'
+      # STAGE: 'production' # Don't use production until staging works
+      # FORCE_RENEW: 'true'
   server:
     build: ./
     image: storage-server
-    ports:
-      - 8000:80
     stdin_open: true
     tty: true
     volumes:
