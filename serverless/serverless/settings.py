@@ -100,10 +100,6 @@ DATABASES = {
     'default': {
         'NAME': '../serverless.db',
         "ENGINE": "django.db.backends.sqlite3",
-        # 'ENGINE': 'mysql.connector.django',
-        # "HOST": "mysql",
-        # 'USER': 'root',
-        # 'PASSWORD': 'somepassword',
         "CHARSET": "utf8",
         "COLLATION": "utf8_general_ci"
     }
@@ -146,10 +142,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# AWS_ACCESS_KEY_ID = "AKIAJN5MJR44Y3PISV2Q"
-#
-# AWS_SECRET_ACCESS_KEY = "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"
 
 AWS_STORAGE_BUCKET_NAME = "storage-management-data"
 #
