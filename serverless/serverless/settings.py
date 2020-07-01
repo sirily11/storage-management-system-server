@@ -99,11 +99,10 @@ WSGI_APPLICATION = 'serverless.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'django',
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': "db",
-        'PASSWORD': 'django',
-        'USER': 'django'
+        'NAME': 'serverless.db',
+        "ENGINE": "django.db.backends.sqlite3",
+        "CHARSET": "utf8",
+        "COLLATION": "utf8_general_ci"
     }
 }
 
@@ -173,7 +172,5 @@ MEDIA_URL = "/media/"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 SECURE_SSL_REDIRECT = False
-
 SESSION_COOKIE_SECURE = True
-
 CSRF_COOKIE_SECURE = True

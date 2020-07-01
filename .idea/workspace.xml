@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Zappa_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zappa_Server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0002_item_created_time.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0003_itemimage_title.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0004_auto_20190624_0600.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0005_auto_20190624_0605.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0006_auto_20190624_1307.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0007_auto_20190624_1310.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0008_auto_20190707_1716.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0009_auto_20190707_1718.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0010_auto_20190707_1948.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0011_itemfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0012_auto_20190708_1304.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0013_item_unit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0014_auto_20190921_0341.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0015_detailposition_uuid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0016_item_quantity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0017_detailposition_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/0018_auto_20200629_2036.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverless/storage_management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/storage_management/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +253,7 @@
       <workItem from="1577357976497" duration="78000" />
       <workItem from="1577522345181" duration="1321000" />
       <workItem from="1584471785759" duration="3107000" />
-      <workItem from="1593456326328" duration="9612000" />
+      <workItem from="1593456326328" duration="10378000" />
     </task>
     <servers />
   </component>
@@ -279,34 +261,34 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593594952620">
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593595338599">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594952620" />
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595338599" />
     <state x="825" y="277" key="EnvironmentVariablesDialog" timestamp="1593590259452">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="825" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590259452" />
-    <state width="1878" height="400" key="GridCell.Tab.0.bottom" timestamp="1593594930092">
+    <state width="1878" height="400" key="GridCell.Tab.0.bottom" timestamp="1593595867433">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594930092" />
-    <state width="1878" height="400" key="GridCell.Tab.0.center" timestamp="1593594930091">
+    <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595867433" />
+    <state width="1878" height="400" key="GridCell.Tab.0.center" timestamp="1593595867432">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594930091" />
-    <state width="1878" height="400" key="GridCell.Tab.0.left" timestamp="1593594930090">
+    <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595867432" />
+    <state width="1878" height="400" key="GridCell.Tab.0.left" timestamp="1593595867431">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594930090" />
-    <state width="1878" height="400" key="GridCell.Tab.0.right" timestamp="1593594930091">
+    <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595867431" />
+    <state width="1878" height="400" key="GridCell.Tab.0.right" timestamp="1593595867433">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594930091" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1593594987589">
+    <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595867433" />
+    <state x="469" y="179" key="SettingsEditor" timestamp="1593595377937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593594987589" />
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595377937" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

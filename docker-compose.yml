@@ -5,7 +5,11 @@ services:
     ports:
       - '80:80'
       - '443:443'
+    links:
+      - django
     restart: always
+    depends_on:
+      - django
     environment:
       DOMAINS: 'storage.sirileepage.com -> http://django'
       STAGE: 'production' # Don't use production until staging works
@@ -20,24 +24,9 @@ services:
     volumes:
       - ./serverless:/usr/local/serverless/serverless/
     command: >
-      sh -c "python manage.py makemigrations &&
-             python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:80"
-    depends_on:
-      - db
-      - https
-
-  db:
-    image: postgres
-    restart: always
-    volumes:
-      - ./database:/var/lib/postgresql/data
-#    ports:
-#      - 5400:5432
-    environment:
-      POSTGRES_PASSWORD: django
-      POSTGRES_USER: django
-      POSTGRES_DB: django
+      sh -c "pipenv run python manage.py makemigrations &&
+             pipenv run python manage.py migrate &&
+             pipenv run python manage.py runserver 0.0.0.0:80"
 
   test:
     build: ./
@@ -48,5 +37,3 @@ services:
       - ./serverless:/usr/local/serverless/serverless/
     command: >
       sh -c "pipenv run coverage run --source='.' manage.py test && pipenv run coverage html"
-    depends_on:
-      - db

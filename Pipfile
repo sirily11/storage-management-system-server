@@ -17,8 +17,6 @@ django-storages = "*"
 django-cleanup = "*"
 drf-schema-adapter = "*"
 coverage = "*"
-psycopg2 = "*"
-psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

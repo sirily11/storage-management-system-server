@@ -84,7 +84,7 @@ class DetailPositionViewSet(viewsets.ModelViewSet):
 
 
 class ItemViewSet(viewsets.ModelViewSet):
-    queryset = Item.objects.all()
+    queryset = Item.objects.all().order_by('name')
     serializer_class = ItemSerializer
     pagination_class = PageNumberPagination
     filter_backends = [DjangoFilterBackend]
