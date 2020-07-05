@@ -14,8 +14,7 @@ class Category(models.Model):
 class Series(models.Model):
     name = models.CharField(
         max_length=128, default="No content here", unique=True)
-    description = models.TextField(
-        max_length=1024, blank=True, null=True, default="")
+    description = models.TextField(blank=True, null=True, default="")
 
     def __str__(self):
         return self.name
@@ -23,8 +22,7 @@ class Series(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=128, default="", unique=True)
-    description = models.TextField(
-        max_length=1024, default="No content here", null=True, blank=True)
+    description = models.TextField(default="No content here", null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -52,7 +50,7 @@ class Location(models.Model):
 
 class DetailPosition(models.Model):
     position = models.CharField(max_length=1024, default="Book Shelf 1")
-    description = models.TextField(max_length=1024, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
     uuid = models.UUIDField(
         default=uuid.uuid4, editable=False, null=True, blank=True)
     image = models.ImageField(blank=True, null=True)
