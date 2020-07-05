@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <recent name="$PROJECT_DIR$/serverless" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Serverless">
+  <component name="RunManager" selected="Django Server.Production">
     <configuration name="Test" type="DjangoTestsConfigurationType">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -251,7 +252,7 @@
       <workItem from="1577522345181" duration="1321000" />
       <workItem from="1584471785759" duration="3107000" />
       <workItem from="1593456326328" duration="11492000" />
-      <workItem from="1593939647422" duration="3971000" />
+      <workItem from="1593939647422" duration="4222000" />
     </task>
     <servers />
   </component>
@@ -259,35 +260,35 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1496" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593939718072">
+    <state x="-1496" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593984935751">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1496" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593939718072" />
+    <state x="-1496" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984935751" />
     <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595338599" />
     <state x="-1095" y="277" key="EnvironmentVariablesDialog" timestamp="1593939716461">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1095" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593939716461" />
     <state x="825" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590259452" />
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom" timestamp="1593984461296">
+    <state width="1878" height="271" key="GridCell.Tab.0.bottom" timestamp="1593984971923">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984461296" />
+    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984971923" />
     <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050756" />
-    <state width="1878" height="271" key="GridCell.Tab.0.center" timestamp="1593984461295">
+    <state width="1878" height="271" key="GridCell.Tab.0.center" timestamp="1593984971922">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984461295" />
+    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984971922" />
     <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050755" />
-    <state width="1878" height="271" key="GridCell.Tab.0.left" timestamp="1593984461294">
+    <state width="1878" height="271" key="GridCell.Tab.0.left" timestamp="1593984971922">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984461294" />
+    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984971922" />
     <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050755" />
-    <state width="1878" height="271" key="GridCell.Tab.0.right" timestamp="1593984461295">
+    <state width="1878" height="271" key="GridCell.Tab.0.right" timestamp="1593984971923">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984461295" />
+    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1593984971923" />
     <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050756" />
     <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1593982473891">
       <screen x="-1920" y="0" width="1920" height="1080" />
