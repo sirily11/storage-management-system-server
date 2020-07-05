@@ -23,7 +23,9 @@ SECRET_KEY = 'y#n2o@b)bu#cu7khqm7x21fwh7t38i-cv+*-6w-@3x6f8cg((#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False if os.getenv('local') else True
+DEBUG = True if os.getenv('local') else False
+
+REACT_APP_DIR = os.path.join(BASE_DIR, 'reactapp')
 
 ALLOWED_HOSTS = ["*"]
 
@@ -44,7 +46,8 @@ INSTALLED_APPS = [
     "storage_management",
     'django_filters',
     "django_cleanup.apps.CleanupConfig",
-    "drf_auto_endpoint"
+    "drf_auto_endpoint",
+    "webapp"
 ]
 
 MIDDLEWARE = [
@@ -164,6 +167,10 @@ AWS_S3_CUSTOM_DOMAIN = 'storage.sirileepage.com'
 
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'reactapp', "build", "static"),  # update the STATICFILES_DIRS
+)
 # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 # STATIC_URL = '/static/'
 

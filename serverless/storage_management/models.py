@@ -45,6 +45,7 @@ class Location(models.Model):
     latitude = models.FloatField(null=True, blank=True)
 
     longitude = models.FloatField(null=True, blank=True)
+
     def __str__(self):
         return f"{self.country}{self.city}{self.building}"
 
@@ -67,7 +68,7 @@ class Item(models.Model):
         default=uuid.uuid4, editable=False, null=True, blank=True)
     name = models.CharField(max_length=1024, default="", verbose_name=_("Item Name"),
                             help_text="Please Enter your item name")
-    description = models.TextField(max_length=1024, blank=True, null=True,
+    description = models.TextField(blank=True, null=True,
                                    help_text="Please enter your item description")
     author = models.ForeignKey(
         Author, on_delete=models.SET_NULL, blank=True, null=True)

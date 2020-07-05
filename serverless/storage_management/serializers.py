@@ -63,6 +63,12 @@ class ItemImageSerializer(serializers.ModelSerializer):
         fields = ("id", "image", "item", "item_name", "category")
 
 
+class AbstractItemImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemImage
+        fields = ("id", "image")
+
+
 class ItemFileSerializer(serializers.ModelSerializer):
     # def __init__(self, *args, **kwargs):
     #     many = kwargs.pop('many', True)
@@ -116,7 +122,8 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = (
-            "id", "name", "description", "price", "quantity", "column", "row", "qr_code", "unit", "created_time", "author_name",
+            "id", "name", "description", "price", "quantity", "column", "row", "qr_code", "unit", "created_time",
+            "author_name",
             "series_name",
             "category_name", "location_name", "position_name",
             "images", "files", "author_id", "series_id", "category_id", "location_id", "position_id",
@@ -128,10 +135,12 @@ class ItemAbstractSerializer(serializers.ModelSerializer):
     series_name = serializers.ReadOnlyField(source="series.name")
     category_name = serializers.ReadOnlyField(source="category.name")
     position = serializers.ReadOnlyField(source="detail_position.position")
+    images = AbstractItemImageSerializer(many=True,
+                                         read_only=True)
 
     class Meta:
         model = Item
         fields = ("id", "uuid", "name", "description", "author",
                   "author_name", "category_name",
                   "series_name", "column", "row", "unit",
-                  "position")
+                  "position", "images", "price")
