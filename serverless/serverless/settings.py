@@ -23,7 +23,7 @@ SECRET_KEY = 'y#n2o@b)bu#cu7khqm7x21fwh7t38i-cv+*-6w-@3x6f8cg((#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'reactapp')
 
