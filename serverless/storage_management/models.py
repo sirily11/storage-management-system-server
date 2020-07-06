@@ -1,6 +1,14 @@
 from django.db import models
 from django.utils.translation import gettext as _
 import uuid
+from os import path
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from datetime import datetime
+
+def upload_location(instance, filename):
+    filebase, extension = path.splitext(filename)
+    now = datetime.now()
+    return f'item-images/{now.year}/{now.month}/{now.day}/' + f"{uuid.uuid4()}{extension}"
 
 
 # Create your models here.
@@ -95,7 +103,7 @@ class ItemImage(models.Model):
     title = models.CharField(
         max_length=128, default="Face", null=True, blank=True)
     image = models.ImageField(verbose_name=_(
-        "Item Image"), upload_to="item-image")
+        "Item Image"), upload_to=upload_location)
     item = models.ForeignKey(
         Item, on_delete=models.CASCADE, related_name="images")
 

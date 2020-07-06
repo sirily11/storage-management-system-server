@@ -17,6 +17,8 @@ django-storages = "*"
 django-cleanup = "*"
 drf-schema-adapter = "*"
 coverage = "*"
+djangorestframework-simplejwt = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,5 +1,5 @@
 import os
-
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import viewsets, generics, mixins
 from rest_framework.response import Response
 from rest_framework import status
@@ -64,26 +64,31 @@ class GetByQR(generics.RetrieveAPIView):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class SeriesViewSet(viewsets.ModelViewSet):
     queryset = Series.objects.all()
     serializer_class = SeriesSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class AuthorViewSet(viewsets.ModelViewSet):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class DetailPositionViewSet(viewsets.ModelViewSet):
     queryset = DetailPosition.objects.all()
     serializer_class = DetailPositionSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class ItemViewSet(viewsets.ModelViewSet):
@@ -92,6 +97,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     pagination_class = PageNumberPagination
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['category', 'location', 'detail_position']
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def list(self, request, *args, **kwargs):
         self.serializer_class = ItemAbstractSerializer
@@ -101,11 +107,13 @@ class ItemViewSet(viewsets.ModelViewSet):
 class ItemImageViewSet(viewsets.ModelViewSet):
     queryset = ItemImage.objects.all()
     serializer_class = ItemImageSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class ItemFileViewSet(viewsets.ModelViewSet):
     queryset = ItemFile.objects.all()
     serializer_class = ItemFileSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def create(self, request, *args, **kwargs):
         files: [ItemFile] = request.data

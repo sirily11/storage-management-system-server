@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from datetime import timedelta
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -23,15 +25,12 @@ SECRET_KEY = 'y#n2o@b)bu#cu7khqm7x21fwh7t38i-cv+*-6w-@3x6f8cg((#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'reactapp')
 
 ALLOWED_HOSTS = ["*"]
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
     'django_filters',
     "django_cleanup.apps.CleanupConfig",
     "drf_auto_endpoint",
-    "webapp"
+    "webapp",
 ]
 
 MIDDLEWARE = [
@@ -131,7 +130,17 @@ REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 20,
     'DEFAULT_METADATA_CLASS': 'drf_auto_endpoint.metadata.MinimalAutoMetadata',
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ]
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=365),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
 }
 
 # Internationalization
@@ -147,22 +156,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-AWS_STORAGE_BUCKET_NAME = "storage-management-data"
-#
-AWS_DEFAULT_ACL = None
-#
-AWS_S3_REGION_NAME = "ap-northeast-1"
-
-MEDIAFILES_LOCATION = 'media'
-
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-
-AWS_S3_CUSTOM_DOMAIN = 'storage.sirileepage.com'
-
 # AWS_LOCATION = "static"
 
 STATIC_URL = "/static/"
@@ -171,13 +169,31 @@ MEDIA_URL = "/media/"
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'reactapp', "build", "static"),  # update the STATICFILES_DIRS
 )
-# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-# STATIC_URL = '/static/'
 
-# MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
+DEBUG = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-# SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+MEDIAFILES_LOCATION = 'media'
+
+if not os.getenv('local'):
+    print("Using Production Environment")
+    AWS_ACCESS_KEY_ID = os.getenv("ACCESS_KEY")
+
+    AWS_SECRET_ACCESS_KEY = os.getenv("SECRET_KEY")
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    # DEBUG = False
+    # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    # STATIC_URL = '/static/'
+
+    # MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
+    AWS_STORAGE_BUCKET_NAME = "storage-management-data"
+
+    AWS_DEFAULT_ACL = None
+
+    AWS_S3_REGION_NAME = "sfo2"
+
+    AWS_S3_ENDPOINT_URL = f"https://storage-image.{AWS_S3_REGION_NAME}.digitaloceanspaces.com"
+

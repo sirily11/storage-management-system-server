@@ -1,14 +1,18 @@
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from rest_framework.test import APIRequestFactory
-from .views import CategoryViewSet, GetByQR
-from .models import Category, Item, DetailPosition
+from ..views import CategoryViewSet, GetByQR
+from ..models import Category, Item, DetailPosition
+from rest_framework.test import force_authenticate
 from uuid import uuid4
 
 
 class TestGetItems(APITestCase):
     def setUp(self):
+        self.user = User.objects.create(username="test", password="1234")
+
         category = Category(name="abc")
         category.save()
 
@@ -40,6 +44,7 @@ class TestGetItems(APITestCase):
     def test_create_category(self):
         factory = APIRequestFactory()
         request = factory.post("/category/", {"name": "cde"})
+        force_authenticate(request, user=self.user)
         view = CategoryViewSet.as_view({"post": "create"})
         response = view(request)
         self.assertEqual(response.status_code, 201)
@@ -54,7 +59,6 @@ class TestGetItems(APITestCase):
         request = factory.get("/searchByQR/", {"qr": self.ud})
         view = GetByQR.as_view()
         response = view(request)
-        print(response)
         self.assertEqual(response.status_code, 200, response)
         self.assertEqual(response.data['name'], "abc")
 
@@ -67,7 +71,6 @@ class TestGetItems(APITestCase):
         request = factory.get("/searchByQR/", {"qr": self.ud2})
         view = GetByQR.as_view()
         response = view(request)
-        print(response)
         self.assertEqual(response.status_code, 200, response)
         self.assertEqual(response.data['name'], "cde")
 
@@ -80,7 +83,6 @@ class TestGetItems(APITestCase):
         request = factory.get("/searchByQR/", {"qr": self.ud3})
         view = GetByQR.as_view()
         response = view(request)
-        print(response)
         self.assertEqual(response.status_code, 200, response)
         self.assertEqual(len(response.data), 2)
         self.assertEqual(response.data[0]['name'], "efg")
