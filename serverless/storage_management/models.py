@@ -68,7 +68,7 @@ class DetailPosition(models.Model):
 
 
 class Item(models.Model):
-    unit_choices = [("USD", "美元"), ("HDK", "港币"), ("CNY", "人民币")]
+    unit_choices = [("USD", "美元"), ("HKD", "港币"), ("CNY", "人民币")]
 
     uuid = models.UUIDField(
         default=uuid.uuid4, editable=False, null=True, blank=True)

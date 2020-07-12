@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/serverless/storage_management/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverless/storage_management/tests/test_item.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/Pipfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless/storage_management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/storage_management/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/storage_management/tests/test_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/storage_management/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/webapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/webapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_server_cmd.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +70,7 @@
       <recent name="$PROJECT_DIR$/serverless" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Production">
+  <component name="RunManager" selected="Django Server.Serverless">
     <configuration name="Test" type="DjangoTestsConfigurationType">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -311,7 +296,9 @@
       <workItem from="1584471785759" duration="3107000" />
       <workItem from="1593456326328" duration="11492000" />
       <workItem from="1593939647422" duration="9934000" />
-      <workItem from="1594044711281" duration="3148000" />
+      <workItem from="1594044711281" duration="3759000" />
+      <workItem from="1594066232567" duration="276000" />
+      <workItem from="1594592729708" duration="15000" />
     </task>
     <servers />
   </component>
@@ -333,46 +320,54 @@
     </state>
     <state x="-683" y="302" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594044961457" />
     <state x="825" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590259452" />
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom" timestamp="1594054647670">
+    <state width="1878" height="271" key="GridCell.Tab.0.bottom" timestamp="1594085196626">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594054647670" />
+    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594085196626" />
     <state width="1878" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050756" />
+    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506487" />
     <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980304" />
-    <state width="1878" height="271" key="GridCell.Tab.0.center" timestamp="1594054647669">
+    <state width="1878" height="271" key="GridCell.Tab.0.center" timestamp="1594085196625">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594054647669" />
+    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594085196625" />
     <state width="1878" height="400" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050755" />
+    <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506485" />
     <state width="1878" height="271" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980303" />
-    <state width="1878" height="271" key="GridCell.Tab.0.left" timestamp="1594054647668">
+    <state width="1878" height="271" key="GridCell.Tab.0.left" timestamp="1594085196624">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594054647668" />
+    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594085196624" />
     <state width="1878" height="400" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050755" />
+    <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506484" />
     <state width="1878" height="271" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980303" />
-    <state width="1878" height="271" key="GridCell.Tab.0.right" timestamp="1594054647670">
+    <state width="1878" height="271" key="GridCell.Tab.0.right" timestamp="1594085196625">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594054647670" />
+    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594085196625" />
     <state width="1878" height="400" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593600050756" />
+    <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506485" />
     <state width="1878" height="271" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980304" />
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1594046455473">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom" timestamp="1594058506489">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455473" />
-    <state width="1878" height="375" key="GridCell.Tab.1.center" timestamp="1594046455472">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506489" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center" timestamp="1594058506488">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455472" />
-    <state width="1878" height="375" key="GridCell.Tab.1.left" timestamp="1594046455471">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506488" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left" timestamp="1594058506487">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455471" />
-    <state width="1878" height="375" key="GridCell.Tab.1.right" timestamp="1594046455472">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506487" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right" timestamp="1594058506489">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455472" />
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506489" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1593595377937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
