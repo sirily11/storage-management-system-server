@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/storage_management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/storage_management/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +67,7 @@
       <recent name="$PROJECT_DIR$/serverless" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Serverless">
+  <component name="RunManager" selected="Django Server.Production">
     <configuration name="Test" type="DjangoTestsConfigurationType">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -298,7 +295,7 @@
       <workItem from="1593939647422" duration="9934000" />
       <workItem from="1594044711281" duration="3759000" />
       <workItem from="1594066232567" duration="276000" />
-      <workItem from="1594592729708" duration="15000" />
+      <workItem from="1594592729708" duration="468000" />
     </task>
     <servers />
   </component>
