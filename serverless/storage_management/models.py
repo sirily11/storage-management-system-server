@@ -2,13 +2,27 @@ from django.db import models
 from django.utils.translation import gettext as _
 import uuid
 from os import path
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from datetime import datetime
+from PIL import Image
+from io import BytesIO
+from django.core.files import File
+
 
 def upload_location(instance, filename):
     filebase, extension = path.splitext(filename)
     now = datetime.now()
     return f'item-images/{now.year}/{now.month}/{now.day}/' + f"{uuid.uuid4()}{extension}"
+
+
+def compress(image):
+    im = Image.open(image)
+    # create a BytesIO object
+    im_io = BytesIO()
+    # save image to BytesIO object
+    im.save(im_io, 'JPEG', quality=60)
+    # create a django-friendly Files object
+    new_image = File(im_io, name=image.name)
+    return new_image
 
 
 # Create your models here.
@@ -63,6 +77,14 @@ class DetailPosition(models.Model):
         default=uuid.uuid4, editable=False, null=True, blank=True)
     image = models.ImageField(blank=True, null=True)
 
+    def save(self, *args, **kwargs):
+        # call the compress function
+        new_image = compress(self.image)
+        # set self.image to new_image
+        self.image = new_image
+        # save
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.position
 
@@ -106,6 +128,14 @@ class ItemImage(models.Model):
         "Item Image"), upload_to=upload_location)
     item = models.ForeignKey(
         Item, on_delete=models.CASCADE, related_name="images")
+
+    def save(self, *args, **kwargs):
+        # call the compress function
+        new_image = compress(self.image)
+        # set self.image to new_image
+        self.image = new_image
+        # save
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"Image-{self.item.name.title()}"

@@ -9,7 +9,7 @@ from .models import *
 from django.db.models import Q
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-import json
+
 
 
 class GetAllSettingsViewSet(generics.RetrieveAPIView):
