@@ -8,8 +8,8 @@ from .serializers import *
 from .models import *
 from django.db.models import Q
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 import json
-
 
 
 class GetAllSettingsViewSet(generics.RetrieveAPIView):
@@ -95,9 +95,10 @@ class ItemViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all().order_by('name')
     serializer_class = ItemSerializer
     pagination_class = PageNumberPagination
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['category', 'location', 'detail_position']
     permission_classes = [IsAuthenticatedOrReadOnly]
+    search_fields = ['name']
 
     def list(self, request, *args, **kwargs):
         self.serializer_class = ItemAbstractSerializer
@@ -147,6 +148,3 @@ class GetItemByLocationView(generics.RetrieveAPIView):
             return Response(data=data.data, status=200)
 
         return Response(data=[], status=400)
-
-
-
