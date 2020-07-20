@@ -80,9 +80,12 @@ class DetailPosition(models.Model):
     def save(self, *args, **kwargs):
         # call the compress function
         if self.image:
-            new_image = compress(self.image)
-            # set self.image to new_image
-            self.image = new_image
+            try:
+                new_image = compress(self.image)
+                # set self.image to new_image
+                self.image = new_image
+            except Exception as e:
+                pass
         # save
         super().save(*args, **kwargs)
 
@@ -133,9 +136,12 @@ class ItemImage(models.Model):
     def save(self, *args, **kwargs):
         # call the compress function
         if self.image:
-            new_image = compress(self.image)
-            # set self.image to new_image
-            self.image = new_image
+            try:
+                new_image = compress(self.image)
+                # set self.image to new_image
+                self.image = new_image
+            except Exception as e:
+                pass
         # save
         super().save(*args, **kwargs)
 
