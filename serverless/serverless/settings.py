@@ -198,4 +198,4 @@ if not os.getenv('local'):
 
     AWS_S3_ENDPOINT_URL = f"https://storage-image.{AWS_S3_REGION_NAME}.digitaloceanspaces.com"
 
-    AWS_S3_CUSTOM_DOMAIN = f"storage-image.{AWS_S3_REGION_NAME}.cdn.digitaloceanspaces.com/storage-management-data"
+    # AWS_S3_CUSTOM_DOMAIN = f"storage-image.{AWS_S3_REGION_NAME}.cdn.digitaloceanspaces.com/storage-management-data"
