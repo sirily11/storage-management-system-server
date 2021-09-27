@@ -1,6 +1,7 @@
-FROM python:3.7
-RUN pip install pipenv
+FROM python:3.9
 WORKDIR /usr/local/serverless
-COPY Pipfile .
-COPY Pipfile.lock .
-RUN pipenv install
+COPY serverless /usr/local/serverless
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+EXPOSE 80
+CMD ["python", "manage.py",  "runserver", "0.0.0.0:80"]

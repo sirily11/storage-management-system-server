@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:websocket" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pip" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +93,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="JupyterTrust" id="81c90649-4c6e-45c6-a6e5-0ca1043e9dd7" />
   <component name="ProjectId" id="1e0R3YwXaAHiafG223yyykhtHTy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,9 +102,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/serverless/storage_management/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,20 +127,31 @@
       <recent name="$PROJECT_DIR$/serverless" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Production">
+  <component name="RunManager" selected="Django tests.Test">
     <configuration name="Test" type="DjangoTestsConfigurationType">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="local" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/serverless-server-wtHDJRMQ/bin/python" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <option name="TARGET" value="" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -170,43 +239,7 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Production" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Zappa_Server" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="ACCESS_KEY" value="MEWBOPAX6PDSC4B7I3QM" />
-        <env name="SECRET_KEY" value="GXOiEtpWesBnalwSkfxzr1ikDUTRM3YF8PAqWcBn11g" />
-        <env name="DJANGO_SETTINGS_MODULE" value="serverless.settings" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/storage-management-system-server-xqYKZuKm/bin/python" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
-        </ENTRIES>
-      </EXTENSION>
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="80" />
-      <option name="host" value="0.0.0.0" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Serverless" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="Local" type="Python.DjangoServer" factoryName="Django server">
       <module name="Zappa_Server" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,6 +274,41 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Remote" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Zappa_Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="serverless.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+          <ENTRY IS_ENABLED="true" PARSER="env" PATH=".env" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="80" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.https-portal: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -255,8 +323,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django Server.Serverless" />
-      <item itemvalue="Django Server.Production" />
+      <item itemvalue="Django Server.Local" />
+      <item itemvalue="Django Server.Remote" />
       <item itemvalue="Django tests.Test" />
       <item itemvalue="Django tests.Test: storage_management.tests.TestGetItems.test_search_by_qr" />
       <item itemvalue="Django tests.Test: storage_management.tests.test_item.TestGetItems.test_list_item" />
@@ -274,6 +342,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -302,108 +371,62 @@
       <workItem from="1595041118869" duration="165000" />
       <workItem from="1595041742748" duration="2401000" />
       <workItem from="1595257445153" duration="1387000" />
+      <workItem from="1632750059786" duration="4626000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1193" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594045621014">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="232" y="139" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632760555215">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="-1193" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594045621014" />
-    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595338599" />
-    <state x="-1225" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594044690807">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="232" y="139" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.960@0.0.1536.960" timestamp="1632760555215" />
+    <state x="482" y="286" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632760405816">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="-1225" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594044690807" />
-    <state width="542" height="466" key="DebuggerActiveHint" timestamp="1595051449724">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="482" y="286" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.960@0.0.1536.960" timestamp="1632760405816" />
+    <state x="624" y="226" key="EnvironmentVariablesDialog" timestamp="1632760553938">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="542" height="466" key="DebuggerActiveHint/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051449724" />
-    <state x="-683" y="302" key="EnvironmentVariablesDialog" timestamp="1594044961457">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="624" y="226" key="EnvironmentVariablesDialog/0.0.1536.960@0.0.1536.960" timestamp="1632760553938" />
+    <state width="956" height="265" key="GridCell.Tab.0.bottom" timestamp="1632760658210">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="-683" y="302" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594044961457" />
-    <state x="825" y="277" key="EnvironmentVariablesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593590259452" />
-    <state width="1878" height="263" key="GridCell.Tab.0.bottom" timestamp="1595262290510">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="956" height="265" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1632760658210" />
+    <state width="956" height="265" key="GridCell.Tab.0.center" timestamp="1632760658209">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594689135734" />
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051770382" />
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.23.1920.1002/-1920.23.1920.1057@0.23.1920.1002" timestamp="1595041514444" />
-    <state width="1878" height="375" key="GridCell.Tab.0.bottom/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506487" />
-    <state width="1878" height="271" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980304" />
-    <state width="1878" height="263" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595262290510" />
-    <state width="1878" height="263" key="GridCell.Tab.0.center" timestamp="1595262290508">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="956" height="265" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1632760658209" />
+    <state width="956" height="265" key="GridCell.Tab.0.left" timestamp="1632760658209">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594689135733" />
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051770381" />
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.23.1920.1002/-1920.23.1920.1057@0.23.1920.1002" timestamp="1595041514443" />
-    <state width="1878" height="375" key="GridCell.Tab.0.center/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506485" />
-    <state width="1878" height="271" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980303" />
-    <state width="1878" height="263" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595262290508" />
-    <state width="1878" height="263" key="GridCell.Tab.0.left" timestamp="1595262290508">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="956" height="265" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1632760658209" />
+    <state width="956" height="265" key="GridCell.Tab.0.right" timestamp="1632760658210">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594689135732" />
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051770381" />
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.23.1920.1002/-1920.23.1920.1057@0.23.1920.1002" timestamp="1595041514443" />
-    <state width="1878" height="375" key="GridCell.Tab.0.left/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506484" />
-    <state width="1878" height="271" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980303" />
-    <state width="1878" height="263" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595262290508" />
-    <state width="1878" height="263" key="GridCell.Tab.0.right" timestamp="1595262290509">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="956" height="265" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1632760658210" />
+    <state x="277" y="116" key="SettingsEditor" timestamp="1632750297129">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594689135733" />
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051770382" />
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.23.1920.1002/-1920.23.1920.1057@0.23.1920.1002" timestamp="1595041514444" />
-    <state width="1878" height="375" key="GridCell.Tab.0.right/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506485" />
-    <state width="1878" height="271" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594041980304" />
-    <state width="1878" height="263" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595262290509" />
-    <state width="1504" height="366" key="GridCell.Tab.1.bottom" timestamp="1595258072330">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455473" />
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051502479" />
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506489" />
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.23.1920.993/-1920.23.1920.1057@0.23.1920.993" timestamp="1595051440291" />
-    <state width="1504" height="366" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595258072330" />
-    <state width="1504" height="366" key="GridCell.Tab.1.center" timestamp="1595258072329">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455472" />
-    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051502478" />
-    <state width="1878" height="375" key="GridCell.Tab.1.center/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506488" />
-    <state width="1878" height="375" key="GridCell.Tab.1.center/0.23.1920.993/-1920.23.1920.1057@0.23.1920.993" timestamp="1595051440290" />
-    <state width="1504" height="366" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595258072329" />
-    <state width="1504" height="366" key="GridCell.Tab.1.left" timestamp="1595258072329">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455471" />
-    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051502478" />
-    <state width="1878" height="375" key="GridCell.Tab.1.left/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506487" />
-    <state width="1878" height="375" key="GridCell.Tab.1.left/0.23.1920.993/-1920.23.1920.1057@0.23.1920.993" timestamp="1595051440290" />
-    <state width="1504" height="366" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595258072329" />
-    <state width="1504" height="366" key="GridCell.Tab.1.right" timestamp="1595258072330">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1594046455472" />
-    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1595051502479" />
-    <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.1004/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1594058506489" />
-    <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1920.993/-1920.23.1920.1057@0.23.1920.993" timestamp="1595051440291" />
-    <state width="1504" height="366" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1595258072330" />
-    <state x="469" y="179" key="SettingsEditor" timestamp="1593595377937">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1593595377937" />
+    <state x="277" y="116" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1632750297129" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/storage_management_system_server$Test__storage_management_tests_test_item_TestGetItems_test_get_item.coverage" NAME="Test: storage_management.tests.test_item.TestGetItems.test_get_item Coverage Results" MODIFIED="1594043489003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/storage_management_system_server$Test__storage_management_tests_test_item_TestGetItems_test_list_item.coverage" NAME="Test: storage_management.tests.test_item.TestGetItems.test_list_item Coverage Results" MODIFIED="1594043260054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/storage_management_system_server$Test__storage_management_tests_test_item_TestGetItems_test_create_item_no_auth.coverage" NAME="Test: storage_management.tests.test_item.TestGetItems.test_create_item_no_auth Coverage Results" MODIFIED="1594043622654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/storage_management_system_server$Test.coverage" NAME="Test Coverage Results" MODIFIED="1595258114851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/storage_management_system_server$Test__storage_management_tests_test_item_TestGetItems_test_get_item.coverage" NAME="Test: storage_management.tests.test_item.TestGetItems.test_get_item Coverage Results" MODIFIED="1594043489003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/storage_management_system_server$Test.coverage" NAME="Test Coverage Results" MODIFIED="1632760556987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

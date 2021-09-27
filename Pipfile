@@ -19,6 +19,7 @@ drf-schema-adapter = "*"
 coverage = "*"
 djangorestframework-simplejwt = "*"
 boto3 = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

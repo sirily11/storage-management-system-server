@@ -30,7 +30,6 @@ REACT_APP_DIR = os.path.join(BASE_DIR, 'reactapp')
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -99,14 +98,27 @@ WSGI_APPLICATION = 'serverless.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'NAME': 'serverless.db',
-        "ENGINE": "django.db.backends.sqlite3",
-        "CHARSET": "utf8",
-        "COLLATION": "utf8_general_ci"
+if not os.getenv("local"):
+    print("Using postgresSQL database")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv("DB_NAME"),
+            'USER': os.getenv("DB_USER"),
+            'PASSWORD': os.getenv("DB_PASSWORD"),
+            'HOST': os.getenv("DB_HOST"),
+            'PORT': os.getenv("DB_PORT"),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'NAME': 'serverless.db',
+            "ENGINE": "django.db.backends.sqlite3",
+            "CHARSET": "utf8",
+            "COLLATION": "utf8_general_ci"
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -185,17 +197,15 @@ if not os.getenv('local'):
 
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-    # DEBUG = False
-    # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-    # STATIC_URL = '/static/'
-
-    # MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, "media")
-    AWS_STORAGE_BUCKET_NAME = "storage-management-data"
+    AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
 
     AWS_DEFAULT_ACL = None
 
-    AWS_S3_REGION_NAME = "sfo2"
+    AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME")
 
-    AWS_S3_ENDPOINT_URL = f"https://storage-image.{AWS_S3_REGION_NAME}.digitaloceanspaces.com"
+    AWS_DEFAULT_ENDING = os.getenv("AWS_DEFAULT_ENDING")
+
+    AWS_S3_ENDPOINT_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.{AWS_S3_REGION_NAME}.{AWS_DEFAULT_ENDING}"
+    print("Using AWS endpoint: " + AWS_S3_ENDPOINT_URL)
 
     # AWS_S3_CUSTOM_DOMAIN = f"storage-image.{AWS_S3_REGION_NAME}.cdn.digitaloceanspaces.com/storage-management-data"
