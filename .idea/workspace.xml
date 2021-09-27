@@ -48,17 +48,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="221c758a-35a6-4764-a3ad-f455c506f8c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build-docker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless/serverless/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverless/serverless/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +362,7 @@
       <workItem from="1595041118869" duration="165000" />
       <workItem from="1595041742748" duration="2401000" />
       <workItem from="1595257445153" duration="1387000" />
-      <workItem from="1632750059786" duration="4626000" />
+      <workItem from="1632750059786" duration="4710000" />
     </task>
     <servers />
   </component>
