@@ -55,12 +55,12 @@ class Location(models.Model):
     country = models.CharField(max_length=128, default="China")
     city = models.CharField(max_length=128, default="Shenzhen")
     street = models.CharField(
-        max_length=128, default="Qian Hai Lu", null=True, blank=True)
+        max_length=128, default="Some Street", null=True, blank=True)
     building = models.CharField(
-        max_length=128, default="Tian Lang Feng Qing", null=True, blank=True)
+        max_length=128, default="Some Building", null=True, blank=True)
     unit = models.CharField(
-        max_length=128, default="Tian Qi Yuan", null=True, blank=True)
-    room_number = models.CharField(max_length=128, default="605")
+        max_length=128, default="Some Unit", null=True, blank=True)
+    room_number = models.CharField(max_length=128, default="Some RM Number")
 
     latitude = models.FloatField(null=True, blank=True)
 
